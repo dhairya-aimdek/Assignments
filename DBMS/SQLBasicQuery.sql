@@ -1,7 +1,7 @@
 CREATE DATABASE Persons;
 
 
-USE practice;
+USE Persons;
 
 
 CREATE TABLE Persons (
