@@ -9,12 +9,13 @@ emp_id INT PRIMARY KEY IDENTITY(1,1),
 emp_name VARCHAR(250),
 emp_age INT,
 emp_salary FLOAT
+);
 
 
 INSERT INTO employee VALUES ('Harry S','20','2500'),
-							('Axar M','32','6543.23'),
-							('Firoz A','26','5233.23'),
-							('Krutarth G','43','2433');
+			    ('Axar M','32','6543.23'),
+		            ('Firoz A','26','5233.23'),
+			    ('Krutarth G','43','2433');
 
 
 SELECT * FROM employee;
