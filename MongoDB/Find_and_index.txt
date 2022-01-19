@@ -1,0 +1,15 @@
+use crudDemo;
+
+db.peson.find();
+
+db.person.find().pretty();
+
+db.person.find({name:'Aniket Patel'});
+
+db.person.createIndex({name:1});
+
+db.person.find({name:'Kishan Ambani'}).pretty();
+
+db.person.find().sort({age:1}).pretty();
+
+db.person.find().count();
