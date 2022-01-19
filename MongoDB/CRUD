@@ -1,0 +1,31 @@
+use crudDemo
+
+db.createCollection('persons');
+
+db.persons.insert([
+	{ name : 'Dhairya Bakhai',
+	  age : 22,
+	  city : 'Ahmedabad'
+	},
+	{ name : 'Kishan Ambani',
+	  age : 20,
+	  city : 'Baroda'
+	},
+	{ name : 'Naitik Mandaliya',
+	  city : 'Surat'
+	},
+	{ name : 'Aniket Patel',
+	  age : 22,
+	  city : 'Mumbai'
+	},
+	{ name : 'Om Gediya',
+	  age : 25,
+	  city : 'Jamnagar'
+	},	
+])
+
+db.persons.update({name:'Naitik Mandaliya'},{$set:{age: 44}})
+
+db.persons.remove({name:'Om Gediya'})
+
+db.person.drop();
