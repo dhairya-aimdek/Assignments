@@ -1,0 +1,54 @@
+.main{
+    margin: 10px;
+    padding: 30px;
+    border: 1px solid gray;
+}
+.score{
+    margin-top: 100px;
+    font-size: 45px;
+    font-weight: bolder;
+    text-align: center;
+}
+.start{
+    text-align: center;
+}
+.startButton{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.nextButton{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: #00308F;
+    color: white;
+    padding: 15px 25px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.nextButton:hover{
+    color: white;
+}
+.scoreButton{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.question{
+    font-size: 30px;
+    text-align: left;
+    font-weight: 600;
+}
+.option{
+    font-size: 27px;
+    text-align: left;
+    font-weight: 600;
+}
