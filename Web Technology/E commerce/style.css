@@ -1,0 +1,19 @@
+li{
+    text-decoration: none;
+    list-style-type: none;
+}
+input{
+    width: 100%;
+    padding: 8px;
+    margin: 10px;
+}
+.inputButton{
+    border: 1px solid gray;
+}
+.btn-success{
+    width: auto;
+    text-align: center;
+}
+.container{
+    padding-top: 10px;
+}
