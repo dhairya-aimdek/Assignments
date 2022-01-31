@@ -12,12 +12,13 @@
 
 <body>
     <div class="container">
+        <h2>ADD ITEM</h2>
         <div class="form">
             <div>
                 <input type="text" placeholder="Name of the product" name="productName" id="productName">
             </div>
             <div>
-                <input type="file" name="productImage" id="productImage" onchange="loadImg(event)">  
+                <input type="file" name="productImage" id="productImage" onchange="loadImg(event)" class="inputButton">  
             </div>
             <div>
                 <input type="text" placeholder="Enter Description" name="productDescription" id="productDescription">
@@ -29,7 +30,7 @@
                 <input type="number" placeholder="Price" name="productprice" id="productPrice">
             </div>
             <div>
-                <input type="submit" name="submitButton" id="submitButton">
+                <input type="submit" name="submitButton" id="submitButton" class="btn btn-success">
             </div>
         </div>
         <hr>
