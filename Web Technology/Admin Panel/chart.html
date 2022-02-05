@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>
+		Admin Panel
+	</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="stylesheet" type="text/css" href="style.css"> 
+</head>
+
+<body>
+	<div class="container">
+		<div class="sidebar">
+			<ul>
+				<li>
+					<a href="index.html">
+						<span class="title">Dashboard</span>
+					</a>
+				</li>
+				<li>
+					<a href="table.html">
+						<span class="title">Tables</span>
+					</a>
+				</li>
+				<li>
+					<a href="card.html">
+						<span class="title">cards</span>
+					</a>
+				</li>
+				<li>
+					<a href="chart.html">
+						<span class="title">Charts</span>
+					</a>
+				</li>
+				<li>
+					<a href="about.html">
+						<span class="title">About Us</span>
+					</a>
+				</li>
+				<li>
+					<a href="contact.html">
+						<span class="title">Contact Us</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="main">
+			<div class="topbar">
+				<div class="search">
+					<label><input type="text" placeholder="search here..."></label>
+					<i class="fas fa-search"></i>
+				</div>
+				<div class="user">
+					<img src="user.png" width="">
+				</div>
+			</div>
+			<div class="chart">
+                <section class="section">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Bar Chart</h4>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="bar"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Line Chart</h4>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="line"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+			</div>
+		</div>
+	</div>
+    <script src="Chart.min.js"></script>
+    <script src="ui-chartjs.js"></script>
+</body>
+</html>
