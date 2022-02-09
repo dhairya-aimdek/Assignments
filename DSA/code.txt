@@ -1,1 +1,234 @@
+--Monk and Rotation
+
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        int testCases = sc.nextInt();
+        while(testCases != 0){
+            int n = sc.nextInt();
+            int k = sc.nextInt();
+            int noOfRotation = k%n;
+            sc.nextLine();
+            String[] arrayOfNumber = sc.nextLine().split(" ");
+            StringBuffer output = new StringBuffer();
+
+            for (int i = 0; i < n; i++) {
+                output.append(arrayOfNumber[(n + i - noOfRotation) % n] + " ");
+            }
+
+            System.out.print(output);
+            System.out.println("");
+            testCases-- ;
+        }
+    }
+}
+
+
+-- Monk and Inversions
+
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        int noOfTest = sc.nextInt();
+        while(noOfTest != 0 ){
+            int dimOfArray = sc.nextInt();
+            int[][] array = new int[dimOfArray][dimOfArray];
+            for(int i=0 ; i<dimOfArray ; i++){
+                for(int j=0 ; j<dimOfArray ; j++){
+                    array[i][j]=sc.nextInt();
+                }
+            }
+            int count = 0;
+            for(int i=0 ; i<dimOfArray ; i++){
+              for(int j=0 ; j<dimOfArray ; j++){
+                  for(int m=i ; m<dimOfArray ; m++){
+                      for(int n=j ; n<dimOfArray ; n++){
+                          if(array[i][j]>array[m][n]){
+                              count++;
+                          }
+                      }
+                  }
+              }  
+            }
+            System.out.println(count);
+            noOfTest--;
+        }
+    }
+}
+
+
+--Minimum AND xor OR
+
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        while(t != 0){
+            int n = sc.nextInt();
+            int a[] = new int[n];
+            for(int i=0; i<n ; i++){
+                a[i]  = sc.nextInt();
+            }
+            Arrays.sort(a);
+            int mini = a[0]^a[1];
+            for(int i=1; i<n-1; i++){
+                mini = Math.min(mini,a[i] ^ a[i + 1]);
+            }
+            System.out.println(mini);
+            t--;
+        }
+    }
+}
+
+
+--The Unlucky 13
+
+import java.util.*;
+class TestClass {
+    public static int recursion(int n){
+        int temp1,temp2,mod=1000000009;
+        HashMap<Integer,Integer> hm=new HashMap<Integer,Integer>();
+        if(n<50000000){
+            if(hm.containsKey(n)){
+                return(hm.get(n));
+            }
+            if(n==0){
+                return 1;
+            }
+            if(n<2){
+                return 10;
+            }
+            temp1 = recursion((n/2));
+            temp2 = recursion((n/2-1));
+            if(n%2 ==0){
+                hm.put(n,(temp1*temp1 - temp2*temp2)%mod);
+                return(hm.get(n));
+            }
+            else{
+                int temp3 = recursion((n/2+1));
+                hm.put(n,temp1*(temp3-temp2)%mod);
+                return(hm.get(n));
+            }
+        }
+        else{
+            if(hm2.containsKey(n)){
+                return(hm2.get(n));
+            }
+            temp1 = recursion((n/2));
+            temp2 = recursion((n/2-1));
+            if(n%2 ==0){
+                hm2.put(n,(temp1*temp1 - temp2*temp2)%1000000009);
+                return(hm2.get(n));
+            }
+            else{
+                int temp3 = recursion((n/2+1));
+                hm2.put(n,temp1*(temp3-temp2)%1000000009);
+                return(hm2.get(n));
+            }
+        }
+    }
+    public static void main(String args[] ) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        HashMap<Integer,Integer> hm2=new HashMap<Integer,Integer>();
+        while(t!=0){
+            int n = sc.nextInt();
+            int ans = recursion(n);
+            System.out.println(ans);
+            t--;
+        }
+    }
+}
+
+
+-- Monk and Nice Strings
+
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        String array[] = new String[n];
+        for(int i=0; i<n; i++){
+            array[i] = sc.next();
+            int counter = 0;
+            for(int j =0 ; j<=i ; j++){
+                if(array[j].compareTo(array[i]) < 0){
+                    counter++;
+                }
+            }
+            System.out.println(counter);
+        }  
+        
+    }
+}
+
+
+--Monk and Suffix Sort
+
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+        String strarray[] = new String[str.length()];
+        int k = sc.nextInt();
+        // System.out.print(str);
+        // System.out.print(k);
+        for(int i=0 ; i<str.length() ; i++){
+            strarray[i] = str.substring(i);
+        }
+        // System.out.print(Arrays.toString(strarray));
+        Arrays.sort(strarray);
+        System.out.println(strarray[k-1]);
+    }
+}
+
+
+--Monk being monitor
+
+import java.util.*;
+class MonkBeingMonitor {
+    public static void main(String args[]) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        while (t != 0) {
+            int n = sc.nextInt();
+            int a[] = new int[n];
+            for (int i = 0; i < n; i++) {
+                a[i] = sc.nextInt();
+            }
+            HashMap<Integer, String> h = new HashMap<Integer, String>();
+
+            for (int i = 0; i < a.length; i++) {
+                if (h.containsKey(a[i])) {
+                    int value = Integer.parseInt(h.get(a[i]));
+                    value++;
+                    h.put(a[i], Integer.toString(value));
+                } else {
+                    h.put(a[i], "1");
+                }
+            }
+            int max = 0;
+            int min = 1000000;
+            for (int i = 0; i < a.length; i++) {
+                if (Integer.parseInt(h.get(a[i])) > max) {
+                    max = Integer.parseInt(h.get(a[i]));
+                }
+                if (Integer.parseInt(h.get(a[i])) < min) {
+                    min = Integer.parseInt(h.get(a[i]));
+                }
+            }
+            if(min==max) 
+                System.out.println(-1);
+            else
+                System.out.println(max-min);
+            t--;
+        }
+        sc.close();
+    }
+}
 
