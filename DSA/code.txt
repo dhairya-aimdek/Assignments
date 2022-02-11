@@ -70,7 +70,7 @@ class TestClass {
             int n = sc.nextInt();
             int a[] = new int[n];
             for(int i=0; i<n ; i++){
-                a[i]  = sc.nextInt();
+                a[i]  = sc.nextInt(); 
             }
             Arrays.sort(a);
             int mini = a[0]^a[1];
